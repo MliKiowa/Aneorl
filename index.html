@@ -19,7 +19,7 @@ const deFault = "https://nanaeo.cn";
 //以上为配置
 const txBroswer = () => {var ua = navigator.userAgent;if (ua.includes("MicroMessenger") || ua.includes("QBWebView") || ua.includes("TIM") || ua.includes("QQTheme")) {return true;}return false;}
 var url = new URL(window.location.href);
-if(txFullScreen){url.searchParams.set('_wwv','1293');window.location.href = url.href;}
+if(txFullScreen && url.searchParams.get('_wwv') !== null){url.searchParams.set('_wwv','1293');window.location.href = url.href;}
 const toUrl = ((url.searchParams.get('url') == null)?deFault:decodeURI(url.searchParams.get('url')));
 const preview = (url) => {var width = document.body.clientWidth;var height = document.documentElement.clientHeight;document.body.innerHTML = `<iframe src="${url}" width="${width}" height="${height}"></iframe>`;}
 if(txBroswer()){preview(toUrl);}else{window.location.href = toUrl;}
