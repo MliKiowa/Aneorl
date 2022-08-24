@@ -9,7 +9,7 @@
 <script src="https://blog-static.cnblogs.com/files/wangzhaobo/vconsole.min.js"></script>
 <script>
 const deFault = "https://nanaeo.cn";
-//const txBroswer = () => {const ua = navigator.userAgent.toLowerCase();if (ua.includes("MicroMessenger") || ua.includes("QBWebView") || ua.includes("TIM") || ua.includes("QQTheme")) {return true;}}return false;}
+const txBroswer = () => {const ua = navigator.userAgent.toLowerCase();if (ua.includes("MicroMessenger") || ua.includes("QBWebView") || ua.includes("TIM") || ua.includes("QQTheme")) {return true;}return false;}
 const url = new URL(window.location.href);
 const toUrl = ((url.searchParams.get('url') == null)?deFault:decodeURI(url.searchParams.get('url')));
 const preview = (url) => {var width = document.body.clientWidth;var height = document.documentElement.clientHeight;document.body.innerHTML = `<iframe src="${url}" width="${width}" height="${height}"></iframe>`;}
