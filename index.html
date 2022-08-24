@@ -10,6 +10,7 @@
 <script>
 const deFault = "https://nanaeo.cn";
 const txBroswer = () => {var ua = navigator.userAgent;if (ua.includes("MicroMessenger") || ua.includes("QBWebView") || ua.includes("TIM") || ua.includes("QQTheme")) {return true;}return false;}
+console.log(txBroswer);
 const url = new URL(window.location.href);
 const toUrl = ((url.searchParams.get('url') == null)?deFault:decodeURI(url.searchParams.get('url')));
 const preview = (url) => {var width = document.body.clientWidth;var height = document.documentElement.clientHeight;document.body.innerHTML = `<iframe src="${url}" width="${width}" height="${height}"></iframe>`;}
