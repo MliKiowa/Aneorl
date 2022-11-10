@@ -27,7 +27,7 @@ var url = new URL(window.location.href);
 if(txFullScreen && url.searchParams.get('_wwv') == null){url.searchParams.set('_wwv','1293');window.location.href = url.href;}
 const toUrl = ((url.searchParams.get('url') == null)?deFault:decodeURI(url.searchParams.get('url')));
 const preview = (url) => {var width = document.body.clientWidth;var height = document.documentElement.clientHeight;document.body.innerHTML = `<iframe src="${url}" frameborder="no" border="0"  width="${width}" height="${height}"></iframe>`;}
-if(txBroswer()){preview(toUrl);}else{window.location.href = toUrl;}
+if(true){preview(toUrl);}else{window.location.href = toUrl;}
 </script>
 </body>
 </html>
